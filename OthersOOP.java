@@ -17,6 +17,7 @@ public class OthersOOP {
 		f1.write(" Java");
 		
 		
+		
 		FileWriter f2 = new FileWriter("data2.txt");
 		f2.write("Hello");
 		f2.write(" Python");
