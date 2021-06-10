@@ -1,19 +1,16 @@
+class Test {
+    public static int no = 0;
+}
 
-class Print {
-	public String delimiter = "";
-	public Print(String delimiter) {
-		 this.delimiter = delimiter;
-	}
+public class Print{
+    public static void main(String[] args) {
 
-	public void A() {
-		System.out.println(this.delimiter);
-		System.out.println("A");
-		System.out.println("A");
-	}
 
-	public void B() {
-		System.out.println(this.delimiter);
-		System.out.println("B");
-		System.out.println("B");
-	}
+        Test a = new Test();
+        Test b = new Test();
+        a.no = 101;
+
+
+        System.out.println(b.no);
+    }
 }
