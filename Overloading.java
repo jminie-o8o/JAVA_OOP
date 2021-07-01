@@ -1,30 +1,36 @@
 
-class OverloadingExam {
-	
-	// 특정 이름을 지닌 메소드가 있다고 할지라도 우리는 같은 이름을 가진 메소드를 또 만들 수 있다.
-	// 이것을 오버로딩이라고 한다.
-	// 오버로딩에서 매개변수의 수가 다르거나 타입이 달라야 가능하다.
-	public int plus(int x, int y) {
-		return x + y;
+class Cal {
+	public int sum(int v1, int v2) {
+		System.out.println("I'm Mom");
+		return v1 + v2;
 	}
-	
-	public int plus(int x, int y, int z) {
-		return x + y + z;
-	
+    
+	// 매개변수의 수를 다르게 하여 같은 이름의 메소드를 또 만들 수 있다.
+	public int sum(int v1, int v2, int v3) {
+		return v1 + v2 + v3;
 	}
-	
-	public String plus(String x,String y) {
-		return x + y;
-	}
+    
+    // 매개변수의 형태를 다르게 하여 같은 이름의 메소드를 만들 수도 있다.
+    public String sum(String x1, String x2){
+    	return x1 + x2;
+    }
 }
+    
+ class Cal3 extends Cal{
+	 public int sum(int v1, int v2) {
+		 super.sum(v1, v2);
+		 System.out.println("override!!!"); // 부모의 sum메소드를 새로운 기능을 넣어 재정의
+		 return v1 + v2;
+	 }
+  }
+ 
 
 
 public class Overloading {
 	
 	public static void main (String[] args) {
-		
-		OverloadingExam o1 = new OverloadingExam();
-		System.out.println(o1.plus(3,4,5));
-		
+		Cal3 c1 = new Cal3();
+		System.out.println(c1.sum(1, 2));
+				
 	}
 }
